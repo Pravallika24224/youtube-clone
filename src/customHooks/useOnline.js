@@ -3,7 +3,9 @@
 import { useEffect, useState } from "react";
 
 const useOnline = () => {
-  const [isOnline, setIsOnline] = useState(true);
+  const [isOnline, setIsOnline] = useState(() =>{
+    return navigator.onLine
+})
 
   useEffect(() => {
     const handleOnline = () => {
@@ -20,7 +22,7 @@ const useOnline = () => {
       window.removeEventListener("online", handleOnline);
       window.removeEventListener("offline", handleOffline);
     };
-  }, []);
+  });
 
   return isOnline;
 };
