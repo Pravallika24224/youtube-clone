@@ -9,7 +9,7 @@ const options = {
     'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
   }
 };
-
+console.log(process.env.REACT_APP_YOUTUBE_API_KEY)
 export const fetchDataFromAPI = async(url) => {
   const response =  await axios.get(`${BASE_URL}/${url}`, options)
   return response?.data

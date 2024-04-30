@@ -12,7 +12,7 @@ const Header = () => {
   const isOnline = useOnline();
   const {theme, setTheme} = useTheme()
   return (
-    <div className='flex flex-row shadow-md dark:bg-black p-2'>
+    <div className='flex flex-row h-14 px-4 md:px-5 justify-between items-center sticky top-0 z-20 bg-white dark:bg-black shadow-md'>
       <div className='flex flex-row justify-center'>
         <img className='h-6 w-8 m-1' src={youtubeIcon} alt="youtube icon"/>
         <div className='text-2xl font-bold tracking-tighter dark:text-white'>YouTube</div>
